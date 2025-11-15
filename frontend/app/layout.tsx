@@ -1,18 +1,14 @@
 import "./globals.css";
 
 export const metadata = {
-    title: "Quiz App",
-    description: "Simple Quiz Builder App",
+  title: "Quiz App",
+  description: "Simple Quiz App",
 };
 
-export default function RootLayout({
-    children,
-}: {
-  children: React.ReactNode;
-}) {
-    return (
-        <html lang="en">
-            <body className="bg-gray-50 text-gray-900">{children}</body>
-        </html>
-    );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className="bg-gray-50 text-gray-900">{children}</body>
+    </html>
+  );
 }

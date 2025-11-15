@@ -4,18 +4,18 @@ import nextTs from "eslint-config-next/typescript";
 import prettier from "eslint-config-prettier/flat";
 
 const eslintConfig = defineConfig([
-    ...nextVitals,
-    ...nextTs,
-    prettier,
-    {
-        rules: {
-            indent: ["error", 4],
-            semi: ["error", "always"],
-            quotes: ["error", "double"],
-            "prefer-arrow-callback": ["error"],
-        },
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  {
+    rules: {
+      indent: ["error", 2],
+      semi: ["error", "always"],
+      quotes: ["error", "double"],
+      "prefer-arrow-callback": ["error"],
     },
-    globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+  },
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ]);
 
 export default eslintConfig;

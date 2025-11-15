@@ -51,7 +51,7 @@ async function seed(): Promise<void> {
             text: "What is the capital of France?",
             type: QuestionType.BOOLEAN,
             options: {
-              create: [{ text: "Paris" }, { text: "London" },  { text: "Berlin" }],
+              create: [{ text: "Paris" }, { text: "London" }, { text: "Berlin" }],
             },
           },
           {

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { Control, UseFormRegister } from "react-hook-form";
+import { Control, FieldErrors, UseFormRegister } from "react-hook-form";
 import { quizSchema } from "@/lib/schemas";
 
 export type Option = {
@@ -26,4 +26,5 @@ export type OptionFieldsProps = {
   nestIndex: number;
   control: Control<QuizFormData>;
   register: UseFormRegister<QuizFormData>;
+  errors: FieldErrors<QuizFormData>;
 };
