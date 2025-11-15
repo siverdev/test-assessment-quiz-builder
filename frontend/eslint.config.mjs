@@ -9,7 +9,6 @@ const eslintConfig = defineConfig([
   prettier,
   {
     rules: {
-      indent: ["error", 2],
       semi: ["error", "always"],
       quotes: ["error", "double"],
       "prefer-arrow-callback": ["error"],

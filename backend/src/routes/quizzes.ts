@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createQuiz, deleteQuiz, getAllQuizzes, getQuiz, temporary } from "../controllers/quizzes.ts";
+import { createQuiz, deleteQuiz, getAllQuizzes, getQuiz } from "../controllers/quizzes.ts";
 
 const router = Router();
 

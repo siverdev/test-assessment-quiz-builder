@@ -4,8 +4,6 @@ import type { CreateQuiz } from "../types/quiz.ts";
 
 const prisma = new PrismaClient();
 
-export const temporary = (req: Request, res: Response) => {};
-
 export const getAllQuizzes = async (req: Request, res: Response) => {
   try {
     const quizzes = await prisma.quiz.findMany({ include: { questions: true } });

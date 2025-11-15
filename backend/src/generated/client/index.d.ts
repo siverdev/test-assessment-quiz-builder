@@ -1761,14 +1761,14 @@ export namespace Prisma {
       HavingValid extends Has<ByFields, HavingFields>,
       ByEmpty extends T["by"] extends never[] ? True : False,
       InputErrors extends ByEmpty extends True
-        ? `Error: "by" must not be empty.`
+        ? 'Error: "by" must not be empty.'
         : HavingValid extends False
           ? {
               [P in HavingFields]: P extends ByFields
                 ? never
                 : P extends string
                   ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-                  : [Error, "Field ", P, ` in "having" needs to be provided in "by"`];
+                  : [Error, "Field ", P, ' in "having" needs to be provided in "by"'];
             }[HavingFields]
           : "take" extends Keys<T>
             ? "orderBy" extends Keys<T>
@@ -2958,14 +2958,14 @@ export namespace Prisma {
       HavingValid extends Has<ByFields, HavingFields>,
       ByEmpty extends T["by"] extends never[] ? True : False,
       InputErrors extends ByEmpty extends True
-        ? `Error: "by" must not be empty.`
+        ? 'Error: "by" must not be empty.'
         : HavingValid extends False
           ? {
               [P in HavingFields]: P extends ByFields
                 ? never
                 : P extends string
                   ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-                  : [Error, "Field ", P, ` in "having" needs to be provided in "by"`];
+                  : [Error, "Field ", P, ' in "having" needs to be provided in "by"'];
             }[HavingFields]
           : "take" extends Keys<T>
             ? "orderBy" extends Keys<T>
@@ -4152,14 +4152,14 @@ export namespace Prisma {
       HavingValid extends Has<ByFields, HavingFields>,
       ByEmpty extends T["by"] extends never[] ? True : False,
       InputErrors extends ByEmpty extends True
-        ? `Error: "by" must not be empty.`
+        ? 'Error: "by" must not be empty.'
         : HavingValid extends False
           ? {
               [P in HavingFields]: P extends ByFields
                 ? never
                 : P extends string
                   ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-                  : [Error, "Field ", P, ` in "having" needs to be provided in "by"`];
+                  : [Error, "Field ", P, ' in "having" needs to be provided in "by"'];
             }[HavingFields]
           : "take" extends Keys<T>
             ? "orderBy" extends Keys<T>

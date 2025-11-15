@@ -7100,7 +7100,7 @@ c();
 p();
 m();
 function Ls(e) {
-  if (!!e.generator?.previewFeatures.some((r) => r.toLowerCase().includes("metrics")))
+  if (e.generator?.previewFeatures.some((r) => r.toLowerCase().includes("metrics")))
     throw new Q(
       "The `metrics` preview feature is not yet available with Accelerate.\nPlease remove `metrics` from the `previewFeatures` in your schema.\n\nMore information about Accelerate: https://pris.ly/d/accelerate",
       e.clientVersion

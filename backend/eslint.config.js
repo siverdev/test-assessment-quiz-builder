@@ -6,8 +6,10 @@ import prettierPlugin from "eslint-plugin-prettier";
 export default [
   js.configs.recommended,
   {
+    ignores: ["src/generated/**", "**/*.config.ts"],
+  },
+  {
     files: ["**/*.ts"],
-    ignores: ["**/*.config.ts"],
     languageOptions: {
       parser: tsParser,
       globals: {
@@ -20,7 +22,6 @@ export default [
       prettier: prettierPlugin,
     },
     rules: {
-      indent: ["warning", 2],
       semi: ["error", "always"],
       quotes: ["error", "double"],
       "prefer-arrow-callback": ["error"],
