@@ -7,7 +7,7 @@ async function seed(): Promise<void> {
   await prisma.question.deleteMany();
   await prisma.quiz.deleteMany();
 
-  const result = await prisma.quiz.create({
+  const quiz1 = await prisma.quiz.create({
     data: {
       title: "General Knowledge Quiz",
       questions: {
@@ -42,7 +42,42 @@ async function seed(): Promise<void> {
     },
   });
 
-  console.log("Seeded quiz:", result.id);
+  const quiz2 = await prisma.quiz.create({
+    data: {
+      title: "Another Quiz",
+      questions: {
+        create: [
+          {
+            text: "What is the capital of France?",
+            type: QuestionType.BOOLEAN,
+            options: {
+              create: [{ text: "Paris" }, { text: "London" },  { text: "Berlin" }],
+            },
+          },
+          {
+            text: "Explain the theory of relativity",
+            type: QuestionType.INPUT,
+          },
+          {
+            text: "Select all prime numbers:",
+            type: QuestionType.CHECKBOX,
+            options: {
+              create: [{ text: "2" }, { text: "3" }, { text: "4" }, { text: "5" }],
+            },
+          },
+        ],
+      },
+    },
+    include: {
+      questions: {
+        include: {
+          options: true,
+        },
+      },
+    },
+  });
+
+  console.log("Seeded quizzes:", [quiz1, quiz2]);
 }
 
 seed()

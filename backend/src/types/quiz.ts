@@ -7,7 +7,7 @@ export interface CreateOption {
 export interface CreateQuestion {
   text: string;
   type: QuestionType;
-  options?: CreateOption[]; 
+  options?: CreateOption[];
 }
 
 export interface CreateQuiz {

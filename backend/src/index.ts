@@ -1,7 +1,7 @@
 //Imports
 import express, { type Express } from "express";
 import dotenv from "dotenv";
-import quizRouter from "./routes/quizzes.ts"
+import quizRouter from "./routes/quizzes.ts";
 
 //Config
 dotenv.config();
