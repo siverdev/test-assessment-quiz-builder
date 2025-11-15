@@ -16,6 +16,10 @@ export default function Question({text, type, options}: QuestionProps) {
             {(() => {
                 switch (type) {
                 case "BOOLEAN":
+                    if (!options || options.length === 0) {
+                        return <p className="text-gray-400 text-sm">No options defined</p>;
+                    }
+
                     return (
                         <div className="flex gap-4">
                             {options?.map((opt) => (
@@ -37,6 +41,10 @@ export default function Question({text, type, options}: QuestionProps) {
                     );
 
                 case "CHECKBOX":
+                    if (!options || options.length === 0) {
+                        return <p className="text-gray-400 text-sm">No options defined</p>;
+                    }
+                    
                     return (
                         <div className="flex flex-col gap-2">
                             {options?.map((opt) => (

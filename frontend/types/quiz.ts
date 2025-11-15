@@ -1,3 +1,7 @@
+import { z } from "zod";
+import { Control, UseFormRegister } from "react-hook-form";
+import { quizSchema } from "@/lib/schemas";
+
 export type Option = {
   id: number;
   text: string;
@@ -14,4 +18,12 @@ export type Quiz = {
   id: number;
   title: string;
   questions: Question[];
+};
+
+export type QuizFormData = z.infer<typeof quizSchema>;
+
+export type OptionFieldsProps = {
+  nestIndex: number;
+  control: Control<QuizFormData>;
+  register: UseFormRegister<QuizFormData>;
 };
