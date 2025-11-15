@@ -1,11 +1,6 @@
-- Start frontend and backend
-- Set up database
-- Create sample quiz
-
 ## Setup Instructions
 
 Follow these steps to get the app running locally.
-
 
 ### 1. Backend
 
@@ -38,12 +33,11 @@ npx prisma migrate dev
 npx prisma generate
 ```
 3. Optionally, open Prisma Studio to view the database
-```
+```bash
 npx prisma studio
 ```
 
 4. Optionally, run seed script on backend to create sample data
-   
 ```bash
 npm run db:seed
 ```
@@ -57,7 +51,7 @@ npm run db:seed
 
 1. Navigate to the frontend directory
 ```bash
-   cd ../frontend
+   cd frontend
 ```
 2. Install dependencies:
 ```bash
